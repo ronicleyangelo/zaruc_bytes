@@ -23,20 +23,24 @@ public class Main {
 
         int[] consumoRL01 = new int[10];
         int[] consumoRL02 = new int[10];
-
-        for (int i = 0; i < 10; i++) {
-            consumoRL01[i] =  decodeBase64[10 + i];
-            consumoRL02[i] =  decodeBase64[28 + i];
-        }
+        byte[] range  = Arrays.copyOfRange(decodeBase64, 10,20);
+        byte[] range2 = Arrays.copyOfRange(decodeBase64, 28, 37);
 
         System.out.println("<QT de registro>: "   + quantidadeRegistro);
         System.out.println("<Nível da bateria>: " + nivelDaBateria);
         System.out.println("<Relojoaria 01 H6>: " + relojoaria01H6);
         System.out.println("<Relojoaria 02 H6>: " + relojoaria02H6);
 
-        for (int i = 0; i < 10; i++) {
-            System.out.println("<Consumo (RL01)>: " + consumoRL01[i]);
-            System.out.println("<Consumo (RL02)>: " + consumoRL02[i]);
+        for (int i = 0; i < range.length; i++) {
+            int bb = byteBuffer.position(0).get();
+            if((bb + i) % 2 == 0) {
+                consumoRL02[i] = range[i];
+                out.println("<consumo (RL02)>: " + consumoRL02[i]);
+            } else {
+                consumoRL01[i] = range[i];
+                out.println("<consumo (RL01)>: " + consumoRL01[i]);
+            }
+
         }
 
     }
