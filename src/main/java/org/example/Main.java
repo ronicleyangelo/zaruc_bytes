@@ -23,24 +23,46 @@ public class Main {
 
         int[] consumoRL01 = new int[10];
         int[] consumoRL02 = new int[10];
-        byte[] range  = Arrays.copyOfRange(decodeBase64, 10,20);
-        byte[] range2 = Arrays.copyOfRange(decodeBase64, 28, 37);
+        byte[] consumoRL01Range = Arrays.copyOfRange(decodeBase64, 10,20);
+        byte[] cosumoRL02Range = Arrays.copyOfRange(decodeBase64, 28, 38);
+        byte[] relojoaria01H6Range = Arrays.copyOfRange(decodeBase64, 20,23);
+        byte[] relojoaria02H6Range = Arrays.copyOfRange(decodeBase64, 24,27);
 
         System.out.println("<QT de registro>: "   + quantidadeRegistro);
         System.out.println("<Nível da bateria>: " + nivelDaBateria);
         System.out.println("<Relojoaria 01 H6>: " + relojoaria01H6);
         System.out.println("<Relojoaria 02 H6>: " + relojoaria02H6);
 
-        for (int i = 0; i < range.length; i++) {
+        for (int i = 0; i < consumoRL01Range.length; i++) {
             int bb = byteBuffer.position(0).get();
             if((bb + i) % 2 == 0) {
-                consumoRL02[i] = range[i];
+                consumoRL02[i] = consumoRL01Range[i];
                 out.println("<consumo (RL02)>: " + consumoRL02[i]);
             } else {
-                consumoRL01[i] = range[i];
+                consumoRL01[i] = consumoRL01Range[i];
                 out.println("<consumo (RL01)>: " + consumoRL01[i]);
             }
+        }
 
+        for (byte b : relojoaria01H6Range) {
+            out.println("<relojoaria 01 H6>: " + b);
+            break;
+        }
+
+        for (byte b : relojoaria02H6Range) {
+            out.println("<relojoaria 02 H6>: " + b);
+            break;
+        }
+
+        for (int i = 0; i < cosumoRL02Range.length; i++) {
+            int bb = byteBuffer.position(0).get();
+            if((bb + i) % 2 == 0) {
+                consumoRL02[i] = cosumoRL02Range[i];
+                out.println("<consumo (RL02)>: " + consumoRL02[i]);
+            } else {
+                consumoRL01[i] = cosumoRL02Range[i];
+                out.println("<consumo (RL01)>: " + consumoRL01[i]);
+            }
         }
 
     }
