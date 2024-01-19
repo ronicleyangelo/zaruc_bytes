@@ -16,9 +16,9 @@
 >   byte[] decodeBase64 = Base64.getDecoder().decode(entradaBase64);
 >   ByteBuffer byteBuffer = ByteBuffer.wrap(decodeBase64); 
 > ```
-> -> Armazenei os btyes numa váriavel e também peguei o seus <em>índice</em> e o <em>range</em>
+> -> Armazenei os btyes numa variável e também peguei o seus <em>índice</em> e o <em>range</em>
 > ```java
-> int quantidadeRegistro = decodeBase64[0];
+>        int quantidadeRegistro = decodeBase64[0];
 >        int nivelDaBateria = decodeBase64[1];
 >
 >        int relojoaria01H6 = byteBuffer.getInt(2);
@@ -30,4 +30,11 @@
 >        byte[] cosumoRL02Range = Arrays.copyOfRange(decodeBase64, 28, 38);
 >        byte[] relojoaria01H6Range = Arrays.copyOfRange(decodeBase64, 20,23);
 >        byte[] relojoaria02H6Range = Arrays.copyOfRange(decodeBase64, 24,27);
+> ```
+> -> A saída do código
+> ```java
+        System.out.println("<QT de registro>: "   + quantidadeRegistro);
+        System.out.println("<Nível da bateria>: " + nivelDaBateria);
+        System.out.println("<Relojoaria 01 H6>: " + relojoaria01H6);
+        System.out.println("<Relojoaria 02 H6>: " + relojoaria02H6);
 > ```
