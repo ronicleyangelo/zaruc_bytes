@@ -11,8 +11,7 @@
 ## Solução 
 > -> Primeiro transformei em Bytes
 > ```java
-> String entradaBase64 = "BSAAAAAJAAABrAACAAIAAQAEAAMAAAAAAAAAAAAAAAAAAAAAAAA=";
-        byte[] decodeBase64 = Base64.getDecoder().decode(entradaBase64);
-
-        ByteBuffer byteBuffer = ByteBuffer.wrap(decodeBase64); ```
+ String entradaBase64 = "BSAAAAAJAAABrAACAAIAAQAEAAMAAAAAAAAAAAAAAAAAAAAAAAA=";
+ byte[] decodeBase64 = Base64.getDecoder().decode(entradaBase64);
+ ByteBuffer byteBuffer = ByteBuffer.wrap(decodeBase64); ```
 > -> Adicionei esses bytes no ByteBuffer
