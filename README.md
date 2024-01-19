@@ -5,10 +5,10 @@
 # 💻 Tecnologia 
 > -> Java
 
-# Objetivo 
+#  📌 Objetivo 
 > -> Trabalhar a lógica de Programação. 
 
-## Solução 
+## 🔎 Solução 
 > -> Primeiro transformei em Bytes e adiciono dentro do {`ByteBuffer`}
 > ```java
 >   String entradaBase64 = "BSAAAAAJAAABrAACAAIAAQAEAAMAAAAAAAAAAAAAAAAAAAAAAAA=";
