@@ -10,3 +10,4 @@
 
 ## Solução 
 > -> Primeiro transformei em Bytes 
+  -> Adicionei esses bytes no ByteBuffer
