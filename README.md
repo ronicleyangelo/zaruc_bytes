@@ -4,3 +4,6 @@
 
 # 💻 Tecnologia 
 > -> Java
+
+# Objetivo 
+> -> Trabalhar a lógica de Programação. 
