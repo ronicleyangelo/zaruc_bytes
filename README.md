@@ -33,8 +33,8 @@
 > ```
 > -> A saída do código
 > ```java
-        System.out.println("<QT de registro>: "   + quantidadeRegistro);
-        System.out.println("<Nível da bateria>: " + nivelDaBateria);
-        System.out.println("<Relojoaria 01 H6>: " + relojoaria01H6);
-        System.out.println("<Relojoaria 02 H6>: " + relojoaria02H6);
+>        System.out.println("<QT de registro>: "   + quantidadeRegistro);
+>        System.out.println("<Nível da bateria>: " + nivelDaBateria);
+>        System.out.println("<Relojoaria 01 H6>: " + relojoaria01H6);
+>        System.out.println("<Relojoaria 02 H6>: " + relojoaria02H6);
 > ```
