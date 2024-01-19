@@ -16,18 +16,18 @@
 >   byte[] decodeBase64 = Base64.getDecoder().decode(entradaBase64);
 >   ByteBuffer byteBuffer = ByteBuffer.wrap(decodeBase64); 
 > ```
-> ->Armazei os btyes numa váriavel e também peguei o seus <em>índice</em> e o <em>range</em>
+> -> Armazenei os btyes numa váriavel e também peguei o seus <em>índice</em> e o <em>range</em>
 > ```java
 > int quantidadeRegistro = decodeBase64[0];
-        int nivelDaBateria = decodeBase64[1];
-
-        int relojoaria01H6 = byteBuffer.getInt(2);
-        int relojoaria02H6 = byteBuffer.getInt(6);
-
-        int[] consumoRL01 = new int[10];
-        int[] consumoRL02 = new int[10];
-        byte[] consumoRL01Range = Arrays.copyOfRange(decodeBase64, 10,20);
-        byte[] cosumoRL02Range = Arrays.copyOfRange(decodeBase64, 28, 38);
-        byte[] relojoaria01H6Range = Arrays.copyOfRange(decodeBase64, 20,23);
-        byte[] relojoaria02H6Range = Arrays.copyOfRange(decodeBase64, 24,27);
+>        int nivelDaBateria = decodeBase64[1];
+>
+>        int relojoaria01H6 = byteBuffer.getInt(2);
+>        int relojoaria02H6 = byteBuffer.getInt(6);
+>
+>        int[] consumoRL01 = new int[10];
+>        int[] consumoRL02 = new int[10];
+>        byte[] consumoRL01Range = Arrays.copyOfRange(decodeBase64, 10,20);
+>        byte[] cosumoRL02Range = Arrays.copyOfRange(decodeBase64, 28, 38);
+>        byte[] relojoaria01H6Range = Arrays.copyOfRange(decodeBase64, 20,23);
+>        byte[] relojoaria02H6Range = Arrays.copyOfRange(decodeBase64, 24,27);
 > ```
